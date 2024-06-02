@@ -44,7 +44,8 @@ class KeywordQueryEventListener(EventListener):
 class ItemEnterEventListener(EventListener):
     def on_event(self, event, extension):
         name = event.get_data()
-        subprocess.call(["alacritty", "-e", "bash", "-c", f"echo -e '\\e]2;$choice\\007'; tmuxinator start '{name}'\""])
+        cmd = f"alacritty -e bash -c \"echo -e '\\e]2;{name}\\007'; tmuxinator start '{name}'\""
+        subprocess.run(cmd, shell=True, check=True)
 
 if __name__ == '__main__':
     SublProjectsExtension().run()
