@@ -1,0 +1,33 @@
+{
+  "required_api_version": "^2.0.0",
+  "name": "Tmuxinator Presets Manager",
+  "description": "Quickly open any Tmuxinator preset.",
+  "developer_name": "Giovanni Campeol",
+  "icon": "images/icon.png",
+  "options": {
+    "query_debounce": 0.1
+  },
+  "preferences": [
+    {
+      "id": "kw",
+      "type": "keyword",
+      "name": "Tmuxinator Presets Manager",
+      "description": "",
+      "default_value": "tmux"
+    },
+    {
+      "id": "presets_dir",
+      "type": "input",
+      "name": "Timuxinator Presets Directory",
+      "description": "Directory where to find your tmuxinator presset",
+      "default_value": "~/.tmuxinator"
+    },
+    {
+      "id": "tmuxinator_executable",
+      "type": "input",
+      "name": "Tmuxinator Executable Path",
+      "description": "Path to the Tmuxinator executable",
+      "default_value": "/usr/bin/tmuxinator"
+    }
+  ]
+}
