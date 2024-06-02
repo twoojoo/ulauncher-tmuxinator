@@ -13,7 +13,7 @@
       "type": "keyword",
       "name": "Tmuxinator Presets Manager",
       "description": "",
-      "default_value": "tmux"
+      "default_value": "txor"
     },
     {
       "id": "presets_dir",
