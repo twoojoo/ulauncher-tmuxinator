@@ -29,9 +29,11 @@ class KeywordQueryEventListener(EventListener):
             if arg and arg.lower() not in name.lower():
                 continue
 
+            name = os.path.basename(name).replace('.yml', '')
+
             item = ExtensionResultItem(
                 icon = 'images/icon.png',
-                name = name.split('/')[-2],
+                name = name,
                 description = 'Path: %s' % name,
                 on_enter = ExtensionCustomAction(name)
             )
